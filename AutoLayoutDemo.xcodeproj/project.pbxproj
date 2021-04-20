@@ -14,6 +14,7 @@
 		3368D5D91AC834C600366512 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3368D5D81AC834C600366512 /* Images.xcassets */; };
 		3368D5DC1AC834C600366512 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3368D5DA1AC834C600366512 /* LaunchScreen.xib */; };
 		3368D5E81AC834C600366512 /* AutoLayoutDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3368D5E71AC834C600366512 /* AutoLayoutDemoTests.m */; };
+		3368D5F31AC8523A00366512 /* WidgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3368D5F21AC8523A00366512 /* WidgetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		3368D5E11AC834C600366512 /* AutoLayoutDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoLayoutDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3368D5E61AC834C600366512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3368D5E71AC834C600366512 /* AutoLayoutDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutDemoTests.m; sourceTree = "<group>"; };
+		3368D5F11AC8523A00366512 /* WidgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetViewController.h; sourceTree = "<group>"; };
+		3368D5F21AC8523A00366512 /* WidgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				3368D5D01AC834C600366512 /* AppDelegate.m */,
 				3368D5D21AC834C600366512 /* ViewController.h */,
 				3368D5D31AC834C600366512 /* ViewController.m */,
+				3368D5F11AC8523A00366512 /* WidgetViewController.h */,
+				3368D5F21AC8523A00366512 /* WidgetViewController.m */,
 				3368D5D51AC834C600366512 /* Main.storyboard */,
 				3368D5D81AC834C600366512 /* Images.xcassets */,
 				3368D5DA1AC834C600366512 /* LaunchScreen.xib */,
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3368D5F31AC8523A00366512 /* WidgetViewController.m in Sources */,
 				3368D5D41AC834C600366512 /* ViewController.m in Sources */,
 				3368D5D11AC834C600366512 /* AppDelegate.m in Sources */,
 				3368D5CE1AC834C600366512 /* main.m in Sources */,
@@ -414,6 +420,7 @@
 				3368D5ED1AC834C600366512 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3368D5EE1AC834C600366512 /* Build configuration list for PBXNativeTarget "AutoLayoutDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +429,7 @@
 				3368D5F01AC834C600366512 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WidgetViewController.h
 //  AutoLayoutDemo
 //
 //  Created by Han on 15-3-29.
@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WidgetViewController.h"
 
-@interface ViewController : UIViewController
-
+@interface WidgetViewController : UIViewController
 
 @end
-

@@ -17,40 +17,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.translucent = NO;
     
     
-    UIButton *buttonTableView = UIButton.new;
-    [buttonTableView setTitle:@"TableView示例" forState:UIControlStateNormal];
-    [buttonTableView setBackgroundColor:[UIColor grayColor]];
+    
+    UIButton *buttonWidget = UIButton.new;
+    [buttonWidget setTitle:@"控件示例" forState:UIControlStateNormal];
+    [buttonWidget setBackgroundColor:[UIColor grayColor]];
     //[buttonTableView sizeToFit];
-    [buttonTableView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.view addSubview:buttonTableView];
+    [buttonWidget setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [buttonWidget addTarget:self action:@selector(jumpToWidgetDemo) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:buttonWidget];
     
     
     NSArray *constraints1 = [NSLayoutConstraint
-                             constraintsWithVisualFormat:@"H:|-50-[buttonTableView]-50-|"
+                             constraintsWithVisualFormat:@"H:|-50-[buttonWidget]-50-|"
                              options:0
                              metrics:nil
-                             views:NSDictionaryOfVariableBindings(buttonTableView)];
+                             views:NSDictionaryOfVariableBindings(buttonWidget)];
     
     
     NSArray *constraints2 = [NSLayoutConstraint
-                             constraintsWithVisualFormat:@"V:|-50-[buttonTableView(==20)]"
+                             constraintsWithVisualFormat:@"V:|-20-[buttonWidget(==20)]"
                              options:0
                              metrics:nil
-                             views:NSDictionaryOfVariableBindings(buttonTableView)];
+                             views:NSDictionaryOfVariableBindings(buttonWidget)];
     
     [self.view addConstraints:constraints1];
     [self.view addConstraints:constraints2];
     
     
+    /*
     UIButton *buttonWebView = UIButton.new;
     [buttonWebView setTitle:@"WebView示例" forState:UIControlStateNormal];
     [buttonWebView setBackgroundColor:[UIColor grayColor]];
     [buttonWebView setTranslatesAutoresizingMaskIntoConstraints:NO];//将使用AutoLayout的方式来布局
     [self.view addSubview:buttonWebView];
     
-    /*
+    
     NSArray *constraints3 = [NSLayoutConstraint
                              constraintsWithVisualFormat:@"H:|-[buttonWebView]-|"
                              options:0
@@ -62,28 +66,35 @@
                              options:0
                              metrics:@{@"height":@30}
                              views:NSDictionaryOfVariableBindings(buttonWebView, buttonTableView)];
-    */
+    
     
 
     //等宽
     NSArray *constraints3 = [NSLayoutConstraint
-                             constraintsWithVisualFormat:@"H:|-50-[buttonWebView(buttonTableView)]"
-                             options:0
+                             constraintsWithVisualFormat:@"H:|-50-[buttonWebView(button1)]"
+                             options:NSLayoutFormatAlignAllLeft
                              metrics:nil
-                             views:NSDictionaryOfVariableBindings(buttonWebView, buttonTableView)];
+                             views:NSDictionaryOfVariableBindings(buttonWebView, button1)];
     //等高
     NSArray *constraints4 = [NSLayoutConstraint
-                             constraintsWithVisualFormat:@"V:[buttonTableView]-(50)-[buttonWebView(buttonTableView)]"
+                             constraintsWithVisualFormat:@"V:[button1]-(50)-[buttonWebView(button1)]"
                              options:0
                              metrics:nil
-                             views:NSDictionaryOfVariableBindings(buttonWebView, buttonTableView)];
+                             views:NSDictionaryOfVariableBindings(buttonWebView, button1)];
     
     [self.view addConstraints:constraints3];
     [self.view addConstraints:constraints4];
     
-    
+    */
     
     /*
+     
+     
+
+     
+     
+     
+     
     //实例化Button
     UIButton *button1 = [[UIButton alloc] initWithFrame:(CGRectZero)];//这里不再需要去刻意指定x.y等坐标.
     [button1 setTitle:@"点击3333" forState:UIControlStateNormal];
@@ -158,6 +169,12 @@
     [self.view addSubview: myview];
     
     */
+}
+
+
+- (void)jumpToWidgetDemo {
+    WidgetViewController *widgetView = [[WidgetViewController alloc] init];
+    [self.navigationController pushViewController:widgetView animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
