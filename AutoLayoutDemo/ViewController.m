@@ -47,14 +47,16 @@
     [self.view addConstraints:constraints2];
     
     
-    /*
+    
     UIButton *buttonWebView = UIButton.new;
     [buttonWebView setTitle:@"WebView示例" forState:UIControlStateNormal];
     [buttonWebView setBackgroundColor:[UIColor grayColor]];
     [buttonWebView setTranslatesAutoresizingMaskIntoConstraints:NO];//将使用AutoLayout的方式来布局
+    [buttonWebView addTarget:self action:@selector(jumpToWebViewDemo) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:buttonWebView];
     
     
+    /*
     NSArray *constraints3 = [NSLayoutConstraint
                              constraintsWithVisualFormat:@"H:|-[buttonWebView]-|"
                              options:0
@@ -66,26 +68,26 @@
                              options:0
                              metrics:@{@"height":@30}
                              views:NSDictionaryOfVariableBindings(buttonWebView, buttonTableView)];
-    
+    */
     
 
     //等宽
     NSArray *constraints3 = [NSLayoutConstraint
-                             constraintsWithVisualFormat:@"H:|-50-[buttonWebView(button1)]"
+                             constraintsWithVisualFormat:@"H:|-50-[buttonWebView(buttonWidget)]"
                              options:NSLayoutFormatAlignAllLeft
                              metrics:nil
-                             views:NSDictionaryOfVariableBindings(buttonWebView, button1)];
+                             views:NSDictionaryOfVariableBindings(buttonWebView, buttonWidget)];
     //等高
     NSArray *constraints4 = [NSLayoutConstraint
-                             constraintsWithVisualFormat:@"V:[button1]-(50)-[buttonWebView(button1)]"
+                             constraintsWithVisualFormat:@"V:[buttonWidget]-(30)-[buttonWebView(buttonWidget)]"
                              options:0
                              metrics:nil
-                             views:NSDictionaryOfVariableBindings(buttonWebView, button1)];
+                             views:NSDictionaryOfVariableBindings(buttonWebView, buttonWidget)];
     
     [self.view addConstraints:constraints3];
     [self.view addConstraints:constraints4];
     
-    */
+    
     
     /*
      
@@ -175,6 +177,11 @@
 - (void)jumpToWidgetDemo {
     WidgetViewController *widgetView = [[WidgetViewController alloc] init];
     [self.navigationController pushViewController:widgetView animated:YES];
+}
+
+- (void)jumpToWebViewDemo {
+    WebViewController *webView = [[WebViewController alloc] init];
+    [self.navigationController pushViewController:webView animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

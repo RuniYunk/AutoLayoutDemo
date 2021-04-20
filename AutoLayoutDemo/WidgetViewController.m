@@ -68,10 +68,18 @@
     // labelOne与labelTwo的竖直约束
     [bgView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-padding-[labelOne]->=0-[labelTwo]-padding-|" options:NSLayoutFormatAlignAllLeft metrics:metrics views:views]];
     
-    //imageView与button的数直约束
+    //imageView与button的竖直约束
     [bgView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-padding-[imageView(imageEdge)]->=padding-[button]-padding-|" options:NSLayoutFormatAlignAllLeft|NSLayoutFormatAlignAllRight  metrics:metrics views:views]];
     
-    
+    /*
+    NSLayoutFormatAlignAllLeft//控件之间左对齐
+    NSLayoutFormatAlignAllRight//控件之间右对齐
+    NSLayoutFormatAlignAllTop//...上对齐
+    NSLayoutFormatAlignAllBottom//...下对齐
+    NSLayoutFormatAlignAllLeading // 使所有视图根据当前区域文字开始的边缘对齐（英语：左边，希伯来语：右边）
+    NSLayoutFormatAlignAllTrailing // 使所有视图根据当前区域文字结束的边缘对齐（英语：右边，希伯来语：左边）。
+    NSLayoutFormatAlignAllCenterX // 使所有视图通过设置中心点的 X 值彼此相等来对齐。
+    */
     
     
 }

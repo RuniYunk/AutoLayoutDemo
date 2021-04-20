@@ -15,6 +15,7 @@
 		3368D5DC1AC834C600366512 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3368D5DA1AC834C600366512 /* LaunchScreen.xib */; };
 		3368D5E81AC834C600366512 /* AutoLayoutDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3368D5E71AC834C600366512 /* AutoLayoutDemoTests.m */; };
 		3368D5F31AC8523A00366512 /* WidgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3368D5F21AC8523A00366512 /* WidgetViewController.m */; };
+		3368D5F61AC85D7000366512 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3368D5F51AC85D7000366512 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		3368D5E71AC834C600366512 /* AutoLayoutDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutDemoTests.m; sourceTree = "<group>"; };
 		3368D5F11AC8523A00366512 /* WidgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetViewController.h; sourceTree = "<group>"; };
 		3368D5F21AC8523A00366512 /* WidgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetViewController.m; sourceTree = "<group>"; };
+		3368D5F41AC85D7000366512 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		3368D5F51AC85D7000366512 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				3368D5D31AC834C600366512 /* ViewController.m */,
 				3368D5F11AC8523A00366512 /* WidgetViewController.h */,
 				3368D5F21AC8523A00366512 /* WidgetViewController.m */,
+				3368D5F41AC85D7000366512 /* WebViewController.h */,
+				3368D5F51AC85D7000366512 /* WebViewController.m */,
 				3368D5D51AC834C600366512 /* Main.storyboard */,
 				3368D5D81AC834C600366512 /* Images.xcassets */,
 				3368D5DA1AC834C600366512 /* LaunchScreen.xib */,
@@ -225,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3368D5F31AC8523A00366512 /* WidgetViewController.m in Sources */,
+				3368D5F61AC85D7000366512 /* WebViewController.m in Sources */,
 				3368D5D41AC834C600366512 /* ViewController.m in Sources */,
 				3368D5D11AC834C600366512 /* AppDelegate.m in Sources */,
 				3368D5CE1AC834C600366512 /* main.m in Sources */,

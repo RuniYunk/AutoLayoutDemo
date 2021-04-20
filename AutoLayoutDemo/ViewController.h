@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "WidgetViewController.h"
+#import "WebViewController.h"
 
 @interface ViewController : UIViewController
 
