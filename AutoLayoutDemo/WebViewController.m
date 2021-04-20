@@ -43,7 +43,7 @@
     label.backgroundColor = [UIColor greenColor];
     [self.view addSubview:label];
     
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[mWebView]-[label]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(label, mWebView)]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[mWebView]-[label]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(label, mWebView)]];
     
     
     
