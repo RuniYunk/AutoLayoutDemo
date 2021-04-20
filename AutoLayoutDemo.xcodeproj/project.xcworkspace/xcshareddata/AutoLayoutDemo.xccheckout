@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9A00E612-1C41-42C6-95B2-5004F5779729</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AutoLayoutDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F3B6EC74EA1A2BF2F7EDBEB6881F82947D1576C5</key>
+		<string>https://git.oschina.net/ipinglun/AutoLayoutDemo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AutoLayoutDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F3B6EC74EA1A2BF2F7EDBEB6881F82947D1576C5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://git.oschina.net/ipinglun/AutoLayoutDemo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F3B6EC74EA1A2BF2F7EDBEB6881F82947D1576C5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F3B6EC74EA1A2BF2F7EDBEB6881F82947D1576C5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AutoLayoutDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
