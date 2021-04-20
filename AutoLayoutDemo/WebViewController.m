@@ -13,6 +13,7 @@
 
 @interface WebViewController () {
     UIWebView *mWebView;
+    NSArray *mConstraint;
 }
 
 @end
@@ -25,6 +26,7 @@
     self.navigationController.navigationBar.translucent = NO;
     
     
+    
     mWebView = UIWebView.new;
     //webView.frame = CGRectMake(0, 0, MAIN_SCREEN_WIDTH, 0);
     mWebView.backgroundColor = [UIColor grayColor];
@@ -35,7 +37,9 @@
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[mWebView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(mWebView)]];
     
-    //[self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[mWebView(==0)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(mWebView)]];
+    mConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[mWebView(==0)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(mWebView)];
+    
+    [self.view addConstraints:mConstraint];
     
     UILabel *label = UILabel.new;
     label.translatesAutoresizingMaskIntoConstraints = NO;
@@ -63,7 +67,10 @@
     NSDictionary *metrics = [NSDictionary dictionaryWithObjectsAndKeys: height, @"height", nil];
 
     
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[mWebView(==height)]" options:0 metrics:metrics views:NSDictionaryOfVariableBindings(mWebView)]];
+    [self.view removeConstraints:mConstraint];
+    
+    mConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[mWebView(==height)]" options:0 metrics:metrics views:NSDictionaryOfVariableBindings(mWebView)];
+    [self.view addConstraints:mConstraint];
     
 }
 
