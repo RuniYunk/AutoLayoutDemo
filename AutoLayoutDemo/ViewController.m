@@ -49,7 +49,7 @@
     
     
     UIButton *buttonWebView = UIButton.new;
-    [buttonWebView setTitle:@"WebView示例" forState:UIControlStateNormal];
+    [buttonWebView setTitle:@"ScrollView+WebView示例" forState:UIControlStateNormal];
     [buttonWebView setBackgroundColor:[UIColor grayColor]];
     [buttonWebView setTranslatesAutoresizingMaskIntoConstraints:NO];//将使用AutoLayout的方式来布局
     [buttonWebView addTarget:self action:@selector(jumpToWebViewDemo) forControlEvents:UIControlEventTouchDown];
