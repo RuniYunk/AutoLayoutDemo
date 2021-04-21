@@ -22,15 +22,27 @@
     
     if (self) {
         
-        self.mLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
-        [self addSubview:self.mLabel];
+        self.mLabel = UILabel.new;
+        self.mLabel.backgroundColor = [UIColor grayColor];
+        self.mLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        self.mLabel.numberOfLines = 0;
+        self.mLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        [self.contentView addSubview:self.mLabel];
+        
+        
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[mLabel]-100-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(mLabel)]];
+        
+        //[self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[mLabel]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(mLabel)]];
+        
         
     }
     
     return self;
 }
 
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 }
+
 @end

@@ -30,26 +30,27 @@
     tableView.delegate = self;
     tableView.dataSource = self;
     //[tableView setBackgroundColor:[UIColor grayColor]];
-    [tableView setSeparatorStyle: UITableViewCellSeparatorStyleNone];
+    //[tableView setSeparatorStyle: UITableViewCellSeparatorStyleNone];
     [tableView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:tableView];
     
     
     NSArray *constraints1 = [NSLayoutConstraint
-                             constraintsWithVisualFormat:@"H:|-[tableView]-|"
+                             constraintsWithVisualFormat:@"H:|-0-[tableView]-0-|"
                              options:0
                              metrics:nil
                              views:NSDictionaryOfVariableBindings(tableView)];
     
     
     NSArray *constraints2 = [NSLayoutConstraint
-                             constraintsWithVisualFormat:@"V:|-10-[tableView]-10-|"
+                             constraintsWithVisualFormat:@"V:|-0-[tableView]-0-|"
                              options:0
                              metrics:nil
                              views:NSDictionaryOfVariableBindings(tableView)];
     
     [self.view addConstraints:constraints1];
     [self.view addConstraints:constraints2];
+    
 }
 
 
@@ -66,9 +67,10 @@
                                   reuseIdentifier:CellIdentifier];
     }
     
-
     cell.mLabel.text = [mData objectAtIndex:(NSUInteger)indexPath.row];
-    NSLog(@"%@", [mData objectAtIndex:(NSUInteger)indexPath.row]);
+   
+    //NSLog(@"%@", [mData objectAtIndex:(NSUInteger)indexPath.row]);
+    
     
     return cell;
     
@@ -84,6 +86,44 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    /*
+    AutoSizeCell2 *cell = [[AutoSizeCell2 alloc] init];
+    cell.textLabel.text = [self getText];
+    
+    // Do the layout pass on the cell, which will calculate the frames for all the views based on the constraints
+    // (Note that the preferredMaxLayoutWidth is set on multi-line UILabels inside the -[layoutSubviews] method
+    // in the UITableViewCell subclass
+    [cell setNeedsLayout];
+    [cell layoutIfNeeded];
+    
+    // Get the actual height required for the cell
+    CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    
+    // Add an extra point to the height to account for the cell separator, which is added between the bottom
+    // of the cell's contentView and the bottom of the table view cell.
+    height += 1;
+    
+    return height;
+    */
+    
+    
+    static NSString * CellIdentifier = @"TableViewCell";
+    
+    TableViewCell *cell = (TableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell.textLabel.text = [mData objectAtIndex:(NSUInteger)indexPath.row];
+    
+    [cell setNeedsLayout];
+    [cell layoutIfNeeded];
+    
+    CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    
+    // Add an extra point to the height to account for the cell separator, which is added between the bottom
+    // of the cell's contentView and the bottom of the table view cell.
+    height += 1;
+    
+    NSLog(@"%f", cell.contentView.frame.size.height);
+    
     return 100;
 }
 

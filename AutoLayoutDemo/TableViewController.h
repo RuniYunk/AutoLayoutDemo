@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "TableViewCell.h"
 
-@interface TableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface TableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
