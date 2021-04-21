@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3349A2CD1AC8FA0200DEDD03 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A2CC1AC8FA0200DEDD03 /* TableViewController.m */; };
+		3349A2D01AC90C6300DEDD03 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349A2CF1AC90C6300DEDD03 /* TableViewCell.m */; };
 		3368D5CE1AC834C600366512 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3368D5CD1AC834C600366512 /* main.m */; };
 		3368D5D11AC834C600366512 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3368D5D01AC834C600366512 /* AppDelegate.m */; };
 		3368D5D41AC834C600366512 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3368D5D31AC834C600366512 /* ViewController.m */; };
@@ -29,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3349A2CB1AC8FA0200DEDD03 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		3349A2CC1AC8FA0200DEDD03 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		3349A2CE1AC90C6300DEDD03 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		3349A2CF1AC90C6300DEDD03 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		3368D5C81AC834C600366512 /* AutoLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3368D5CC1AC834C600366512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3368D5CD1AC834C600366512 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -95,6 +101,10 @@
 				3368D5F21AC8523A00366512 /* WidgetViewController.m */,
 				3368D5F41AC85D7000366512 /* WebViewController.h */,
 				3368D5F51AC85D7000366512 /* WebViewController.m */,
+				3349A2CB1AC8FA0200DEDD03 /* TableViewController.h */,
+				3349A2CC1AC8FA0200DEDD03 /* TableViewController.m */,
+				3349A2CE1AC90C6300DEDD03 /* TableViewCell.h */,
+				3349A2CF1AC90C6300DEDD03 /* TableViewCell.m */,
 				3368D5D51AC834C600366512 /* Main.storyboard */,
 				3368D5D81AC834C600366512 /* Images.xcassets */,
 				3368D5DA1AC834C600366512 /* LaunchScreen.xib */,
@@ -229,7 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3349A2D01AC90C6300DEDD03 /* TableViewCell.m in Sources */,
 				3368D5F31AC8523A00366512 /* WidgetViewController.m in Sources */,
+				3349A2CD1AC8FA0200DEDD03 /* TableViewController.m in Sources */,
 				3368D5F61AC85D7000366512 /* WebViewController.m in Sources */,
 				3368D5D41AC834C600366512 /* ViewController.m in Sources */,
 				3368D5D11AC834C600366512 /* AppDelegate.m in Sources */,

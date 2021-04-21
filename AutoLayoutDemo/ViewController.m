@@ -56,36 +56,49 @@
     [self.view addSubview:buttonWebView];
     
     
-    /*
+    
     NSArray *constraints3 = [NSLayoutConstraint
-                             constraintsWithVisualFormat:@"H:|-[buttonWebView]-|"
+                             constraintsWithVisualFormat:@"H:|-50-[buttonWebView]-50-|"
                              options:0
                              metrics:nil
                              views:NSDictionaryOfVariableBindings(buttonWebView)];
     
     NSArray *constraints4 = [NSLayoutConstraint
-                             constraintsWithVisualFormat:@"V:[buttonTableView]-[buttonWebView(==height)]"
+                             constraintsWithVisualFormat:@"V:[buttonWidget]-30-[buttonWebView(==height)]"
                              options:0
-                             metrics:@{@"height":@30}
-                             views:NSDictionaryOfVariableBindings(buttonWebView, buttonTableView)];
-    */
+                             metrics:@{@"height":@20}
+                             views:NSDictionaryOfVariableBindings(buttonWebView, buttonWidget)];
     
 
-    //等宽
-    NSArray *constraints3 = [NSLayoutConstraint
-                             constraintsWithVisualFormat:@"H:|-50-[buttonWebView(buttonWidget)]"
-                             options:NSLayoutFormatAlignAllLeft
-                             metrics:nil
-                             views:NSDictionaryOfVariableBindings(buttonWebView, buttonWidget)];
-    //等高
-    NSArray *constraints4 = [NSLayoutConstraint
-                             constraintsWithVisualFormat:@"V:[buttonWidget]-(30)-[buttonWebView(buttonWidget)]"
-                             options:0
-                             metrics:nil
-                             views:NSDictionaryOfVariableBindings(buttonWebView, buttonWidget)];
-    
     [self.view addConstraints:constraints3];
     [self.view addConstraints:constraints4];
+    
+    
+    
+    
+    UIButton *buttonTableView = UIButton.new;
+    [buttonTableView setTitle:@"TableView示例" forState:UIControlStateNormal];
+    [buttonTableView setBackgroundColor:[UIColor grayColor]];
+    [buttonTableView setTranslatesAutoresizingMaskIntoConstraints:NO];//将使用AutoLayout的方式来布局
+    [buttonTableView addTarget:self action:@selector(jumpToTableViewDemo) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:buttonTableView];
+    
+    
+    //等宽
+    NSArray *constraints5 = [NSLayoutConstraint
+                             constraintsWithVisualFormat:@"H:|-50-[buttonTableView(buttonWebView)]"
+                             options:NSLayoutFormatAlignAllLeft
+                             metrics:nil
+                             views:NSDictionaryOfVariableBindings(buttonTableView, buttonWebView)];
+    //等高
+    NSArray *constraints6 = [NSLayoutConstraint
+                             constraintsWithVisualFormat:@"V:[buttonWebView]-30-[buttonTableView(buttonWebView)]"
+                             options:0
+                             metrics:nil
+                             views:NSDictionaryOfVariableBindings(buttonTableView, buttonWebView)];
+    
+    [self.view addConstraints:constraints5];
+    [self.view addConstraints:constraints6];
     
     
     
@@ -182,6 +195,11 @@
 - (void)jumpToWebViewDemo {
     WebViewController *webView = [[WebViewController alloc] init];
     [self.navigationController pushViewController:webView animated:YES];
+}
+
+- (void)jumpToTableViewDemo {
+    TableViewController *tableView = [[TableViewController alloc] init];
+    [self.navigationController pushViewController:tableView animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
